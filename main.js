@@ -1,11 +1,11 @@
 function menuToggle () {
-    const headerMenu = document.querySelector('.header-menu');
+    var headerMenu = document.querySelector('.header-menu');
     headerMenu.classList.toggle('header-menu--hidden');
 }
 
 	
-const slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+var slides = document.querySelectorAll('.slide');
+var currentSlide = 0;
  
 function nextSlide() {
     goToSlide(currentSlide+1);
@@ -21,5 +21,6 @@ function goToSlide(n) {
     slides[currentSlide].className = 'slide showing';
 }
 
+document.querySelector('.prev').addEventListener('click', previousSlide);
+document.querySelector('.next').addEventListener('click', nextSlide);
 document.querySelector('.menu-toggle').addEventListener('click', menuToggle);
-document.querySelectorAll('button.btn').forEach(element => element.addEventListener('click', nextSlide));

@@ -7,8 +7,17 @@
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
     <title>test-task</title>
+    <script>
+    function load(){
+    setTimeout(function(){
+        document.querySelector("#loader").style.display = "none";
+        document.querySelector(".wrapper").style.display = "block";
+    },1000)
+    };
+    </script>
 </head>
-<body>
+<body onload="load()";>
+    <div id="loader"></div>
     <div class="wrapper">
         <header class="header-main">
             <h1>
